@@ -7,7 +7,6 @@ public class array_question {
         //Question 1 : Two Sum.
         // Given an array of integers nums and an integer target,
         // return indices of the two numbers such that they add up to target.
-
         Scanner sc = new Scanner(System.in);
         int arr[] = {1,2,4,3,5};
         int num = sc.nextInt();
