@@ -7,15 +7,26 @@ public class array_question {
         //Question 1 : Two Sum.
         // Given an array of integers nums and an integer target,
         // return indices of the two numbers such that they add up to target.
+//        Scanner sc = new Scanner(System.in);
+//        int arr[] = {1,2,4,3,5};
+//        int num = sc.nextInt();
+//        for(int i = 0;i<arr.length;i++){
+//           for(int k = 0;k<arr.length;k++){
+//               if(num== arr[i]+arr[k]){
+//                   System.out.println("["+arr[i]+","+arr[k]+"]");
+//               }
+//           }
+//        }
+
+        //Question 2 : Write a function to find the longest common prefix string amongst an array of strings.
+        //If there is no common prefix, return an empty string "".
+
         Scanner sc = new Scanner(System.in);
-        int arr[] = {1,2,4,3,5};
-        int num = sc.nextInt();
-        for(int i = 0;i<arr.length;i++){
-           for(int k = 0;k<arr.length;k++){
-               if(num== arr[i]+arr[k]){
-                   System.out.println("["+arr[i]+","+arr[k]+"]");
-               }
-           }
+        String s = sc.nextLine();
+        if(s.startsWith("fl",0)){
+            System.out.println("fl");
+        }else {
+            System.out.println("");
         }
     }
 }
