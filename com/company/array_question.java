@@ -1,32 +1,33 @@
 package com.company;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        if(nums.length==0) return 0;
+
+        int g = 0;
+        for (int i = 0; i < nums.length; i++) {
+                if (nums[i] != nums[g]) {
+                    nums[++g] = nums[i];
+                }
+        }return g+1;
+    }
+}
 public class array_question {
     public static void main(String[] args) {
-        //Question 1 : Two Sum.
-        // Given an array of integers nums and an integer target,
-        // return indices of the two numbers such that they add up to target.
-//        Scanner sc = new Scanner(System.in);
-//        int arr[] = {1,2,4,3,5};
-//        int num = sc.nextInt();
-//        for(int i = 0;i<arr.length;i++){
-//           for(int k = 0;k<arr.length;k++){
-//               if(num== arr[i]+arr[k]){
-//                   System.out.println("["+arr[i]+","+arr[k]+"]");
-//               }
-//           }
-//        }
+        //Question 3: Given an integer array nums sorted in non-decreasing order,
+        // remove the duplicates in-place such that each unique element appears only once.
+        // The relative order of the elements should be kept the same.
+        // Then return the number of unique elements in nums.
+        Solution s = new Solution();
+        int[] nums = {0,0,1,1,1,2,2,3,3,4};  // Example input
 
-        //Question 2 : Write a function to find the longest common prefix string amongst an array of strings.
-        //If there is no common prefix, return an empty string "".
+        int newLength = s.removeDuplicates(nums);
 
-        Scanner sc = new Scanner(System.in);
-        String s = sc.nextLine();
-        if(s.startsWith("fl",0)){
-            System.out.println("fl");
-        }else {
-            System.out.println("");
-        }
+        // Print only the "new" array part (unique elements)
+        System.out.println("New length = " + newLength);
+        System.out.println("Unique elements = " + Arrays.toString(Arrays.copyOf(nums, newLength)));
     }
 }
