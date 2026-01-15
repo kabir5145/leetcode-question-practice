@@ -22,7 +22,22 @@ public class Sum_Of_Unique_Elements {
 
         return sum;
     }
+/*
 
+      // Most optimized solution
+
+    HashMap<Integer,Integer> arr=new HashMap<>();
+        for(int i=0;i<nums.length;i++){
+        arr.put(nums[i],arr.getOrDefault(nums[i],0)+1);
+    }
+    int sum=0;
+        for(int i:arr.keySet()){
+        if(arr.get(i)==1){
+            sum+=i;
+        }
+    }
+        return sum;
+ */
     public static void main(String[] args) {
         Sum_Of_Unique_Elements obj = new Sum_Of_Unique_Elements();
         System.out.println(obj.sumOfUnique(new int[]{1,2,3,2}));
