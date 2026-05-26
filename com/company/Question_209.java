@@ -6,6 +6,7 @@ public class Question_209 {
         Time : O(n)
         Space : O(1)
          */
+        /*
         int left = 0, sum = 0;
         int minLen = Integer.MAX_VALUE;
 
@@ -18,6 +19,23 @@ public class Question_209 {
             }
         }
         return minLen == Integer.MAX_VALUE ? 0 : minLen;
+         */
+        int n = nums.length;
+        int low = 0;
+        int high = 0;
+        int ans = Integer.MAX_VALUE;
+        int sum = 0;
+
+        while (high < n){
+            sum += nums[high];
+            while (sum >= target){
+                ans = Math.min(ans,high-low+1);
+                sum -= nums[low];
+                low++;
+            }
+            high++;
+        }
+        return ans == Integer.MAX_VALUE ? 0 : ans;
     }
     public static void main(String[] args) {
 //        Minimum Size Subarray Sum
